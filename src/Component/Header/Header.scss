@@ -1,0 +1,17 @@
+@import '../../style/variables';
+@import '../../style/mixin';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+
+  span {
+    @include title();
+  }
+
+  button {
+    @include btn-varint($bg-gray, $primary-color);
+    height: 40px;
+  }
+}

@@ -1,0 +1,13 @@
+@import 'variables';
+
+@mixin title() {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+@mixin btn-varint($color, $bg-color) {
+  background-color: $bg-color;
+  border: none;
+  color: $color;
+  width: 150px;
+}
