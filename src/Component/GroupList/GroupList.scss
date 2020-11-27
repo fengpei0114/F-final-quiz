@@ -1,0 +1,29 @@
+@import '../../style/variables';
+
+.group_div {
+  margin: 20px;
+  border: 1px solid $gray;
+  padding-bottom: 5px;
+}
+.group_title {
+  line-height: 70px;
+  background-color: $gray;
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  position: relative;
+
+  span {
+    display: flex;
+    position: absolute;
+    right: 0;
+  }
+}
+.group_title p {
+  margin: 0;
+  color: white;
+}
+.group_trainees {
+  margin: 10px 0 10px 0;
+  display: flex;
+}

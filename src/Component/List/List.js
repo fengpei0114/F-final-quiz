@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './List.scss';
+import { getData } from '../../Api/getData';
 
 export const List = (Props) => {
-  const { member, deleteMember } = Props;
+  const { member, deleteMember, resource } = Props;
   const [isDeleteBtnShow, setIsDeleteBtnShow] = useState(false);
   const onMouseOver = () => {
     setIsDeleteBtnShow(true);
@@ -11,6 +12,7 @@ export const List = (Props) => {
     setIsDeleteBtnShow(false);
   };
   const deleteListMember = () => {
+    getData.deleteById(resource, member.id).then();
     deleteMember(member.id);
   };
   return (

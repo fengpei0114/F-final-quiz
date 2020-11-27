@@ -11,4 +11,7 @@ export const getData = {
   deleteById: async (resource, id) => {
     return axios.delete(`${BASE_URL}/${resource}/${id}`);
   },
+  getGroups: async () => {
+    return axios.get(`${BASE_URL}/groups`).then((res) => res.data);
+  },
 };

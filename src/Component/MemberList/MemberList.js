@@ -4,14 +4,13 @@ import { List } from '../List/List';
 import { getData } from '../../Api/getData';
 
 export const MemberList = (Props) => {
-  const { resource, type } = Props;
+  const { resource, type, updateStatus } = Props;
   const [isInAdding, setIsInAdding] = useState(false);
   const [member, setMember] = useState([]);
   const [addName, setAddName] = useState('');
   useEffect(() => {
     getData.getAll(resource).then((index) => setMember(index));
-    console.log(member);
-  }, [isInAdding]);
+  }, [isInAdding, updateStatus]);
 
   const clickAddMemberBtn = () => {
     setIsInAdding(true);
@@ -27,7 +26,6 @@ export const MemberList = (Props) => {
     }
   };
   const deleteMember = (id) => {
-    getData.deleteById(resource, id).then();
     setMember(member.filter((index) => index.id !== id));
   };
 
@@ -35,7 +33,7 @@ export const MemberList = (Props) => {
     <div className="memberList_div">
       <span className="memberList-tittle">{type}列表</span>
       {member.map((trainee, index) => (
-        <List member={trainee} key={index} deleteMember={deleteMember} />
+        <List member={trainee} key={index} deleteMember={deleteMember} resource={resource} />
       ))}
       {isInAdding ? (
         <input
