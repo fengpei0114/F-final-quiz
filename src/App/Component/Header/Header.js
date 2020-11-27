@@ -8,9 +8,9 @@ export const Header = (Props) => {
   };
 
   return (
-    <header>
+    <header data-testid="header">
       <span>分组列表</span>
-      <button type="button" onClick={sortGroup}>
+      <button type="button" onClick={sortGroup} data-testid="sortGroup-btn">
         分组学员
       </button>
     </header>

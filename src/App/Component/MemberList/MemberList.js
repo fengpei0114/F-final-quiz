@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './MemberList.scss';
 import { List } from '../List/List';
-import { getData } from '../../Api/getData';
+import { getData } from '../../../Api/getData';
 
 export const MemberList = (Props) => {
   const { resource, type, updateStatus } = Props;
@@ -30,7 +30,7 @@ export const MemberList = (Props) => {
   };
 
   return (
-    <div className="memberList_div">
+    <div className="memberList_div" data-testid="member-list-container">
       <span className="memberList-tittle">{type}列表</span>
       {member.map((trainee, index) => (
         <List member={trainee} key={index} deleteMember={deleteMember} resource={resource} />

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.scss';
-import { Header } from '../Header/Header';
-import { MemberList } from '../MemberList/MemberList';
-import { GroupList } from '../GroupList/GroupList';
+import { Header } from './Component/Header/Header';
+import { MemberList } from './Component/MemberList/MemberList';
+import { GroupList } from './Component/GroupList/GroupList';
 
 class App extends Component {
   constructor(props) {

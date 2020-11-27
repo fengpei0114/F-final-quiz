@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './List.scss';
-import { getData } from '../../Api/getData';
+import { getData } from '../../../Api/getData';
 
 export const List = (Props) => {
   const { member, deleteMember, resource } = Props;

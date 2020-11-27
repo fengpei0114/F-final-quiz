@@ -1,7 +1,7 @@
 import './GroupList.scss';
 import React, { useEffect, useState } from 'react';
 import { List } from '../List/List';
-import { getData } from '../../Api/getData';
+import { getData } from '../../../Api/getData';
 
 export const GroupList = (Props) => {
   const { updateStatus } = Props;
@@ -31,7 +31,7 @@ export const GroupList = (Props) => {
     setGroup(newArray);
   };
   return group.map((team, index) => (
-    <div className="group_div" key={index}>
+    <div className="group_div" key={index} data-testid="group-list-container">
       <div className="group_title">
         <p>{team.id}组</p>
         <span>
