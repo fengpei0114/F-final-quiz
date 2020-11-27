@@ -14,14 +14,17 @@
 
 @mixin MemberItem($bg-color) {
   background-color: $bg-color;
-  padding: $item-padding-top-bottom $item-padding-left-right;
-  margin-top: $item-margin;
+  width: $item-width;
+  height: $item-height;
+  line-height: $item-height;
+  text-align: center;
+  margin: $item-margin;
 }
 
 @mixin btn-AddMember() {
   background-color: transparent;
-  padding: $item-padding-top-bottom $item-padding-left-right;
-  height: 40px;
+  width: $item-width;
+  height: $item-height;
   border: 1px solid $gray;
-  margin-top: $item-margin;
+  margin: $item-margin;
 }

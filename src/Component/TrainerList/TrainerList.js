@@ -1,39 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './TrainerList.scss';
 import { List } from '../List/List';
-
-const data = [
-  {
-    id: 1,
-    name: 'Foo',
-  },
-  {
-    id: 2,
-    name: 'Bar',
-  },
-  {
-    id: 3,
-    name: 'Foo',
-  },
-  {
-    id: 4,
-    name: 'Bar',
-  },
-  {
-    id: 5,
-    name: 'Foo',
-  },
-  {
-    id: 6,
-    name: 'Bar',
-  },
-];
+import { TrainerApi } from '../../Api/TrainerApi';
 
 export const TrainerList = () => {
+  const [trainers, setTrainers] = useState([]);
+  useEffect(() => {
+    TrainerApi.getAllTrainers().then((index) => setTrainers(index));
+  }, []);
   return (
     <div className="trainers_div">
       <span className="trainers-tittle">讲师列表</span>
-      {data.map((trainer) => (
+      {trainers.map((trainer) => (
         <List member={trainer} />
       ))}
       <button type="button" className="add_trainer">
