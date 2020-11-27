@@ -8,8 +8,8 @@ class App extends Component {
     return (
       <div data-testid="app" className="App">
         <Header />
-        <MemberList resource="trainers?grouped=false" type="讲师" />
-        <MemberList resource="trainees?grouped=false" type="学员" />
+        <MemberList resource="trainers" type="讲师" />
+        <MemberList resource="trainees" type="学员" />
       </div>
     );
   }

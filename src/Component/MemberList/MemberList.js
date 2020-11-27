@@ -10,6 +10,7 @@ export const MemberList = (Props) => {
   const [addName, setAddName] = useState('');
   useEffect(() => {
     getData.getAll(resource).then((index) => setMember(index));
+    console.log(member);
   }, [isInAdding]);
 
   const clickAddMemberBtn = () => {
@@ -25,12 +26,16 @@ export const MemberList = (Props) => {
       setAddName('');
     }
   };
+  const deleteMember = (id) => {
+    getData.deleteById(resource, id).then();
+    setMember(member.filter((index) => index.id !== id));
+  };
 
   return (
     <div className="memberList_div">
       <span className="memberList-tittle">{type}列表</span>
       {member.map((trainee, index) => (
-        <List member={trainee} key={index} />
+        <List member={trainee} key={index} deleteMember={deleteMember} />
       ))}
       {isInAdding ? (
         <input

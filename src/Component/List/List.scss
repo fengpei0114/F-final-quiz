@@ -4,3 +4,11 @@
 .list-member {
   @include MemberItem($light-gray);
 }
+
+.deleteBtn {
+  @include MemberItem($primary-color);
+  border: none;
+  float: right;
+  width: 30px;
+  margin: 0 -30px 0 0;
+}
