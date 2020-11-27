@@ -11,7 +11,7 @@ header {
   }
 
   button {
-    @include btn-varint($bg-gray, $primary-color);
+    @include btn-primary($bg-gray, $primary-color);
     height: 40px;
   }
 }

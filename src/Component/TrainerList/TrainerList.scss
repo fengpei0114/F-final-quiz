@@ -1,0 +1,16 @@
+@import '../../style/mixin';
+
+.trainers_div {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .trainers-tittle {
+    @include title();
+    width: 100%;
+  }
+
+  .add_trainer {
+    @include btn-AddMember();
+  }
+}

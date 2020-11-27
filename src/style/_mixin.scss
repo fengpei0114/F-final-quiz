@@ -2,12 +2,26 @@
 
 @mixin title() {
   font-weight: bold;
-  font-size: 30px;
+  font-size: $title-font-size;
 }
 
-@mixin btn-varint($color, $bg-color) {
+@mixin btn-primary($color, $bg-color) {
   background-color: $bg-color;
   border: none;
   color: $color;
   width: 150px;
+}
+
+@mixin MemberItem($bg-color) {
+  background-color: $bg-color;
+  padding: $item-padding-top-bottom $item-padding-left-right;
+  margin-top: $item-margin;
+}
+
+@mixin btn-AddMember() {
+  background-color: transparent;
+  padding: $item-padding-top-bottom $item-padding-left-right;
+  height: 40px;
+  border: 1px solid $gray;
+  margin-top: $item-margin;
 }

@@ -5,3 +5,13 @@ body {
   font-size: $base-font-size;
   padding: 20px;
 }
+
+ul {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}

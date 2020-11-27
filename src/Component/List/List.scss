@@ -1,0 +1,6 @@
+@import '../../style/mixin';
+@import '../../style/variables';
+
+.list-member {
+  @include MemberItem($light-gray);
+}
