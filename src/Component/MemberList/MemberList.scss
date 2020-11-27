@@ -1,16 +1,20 @@
 @import '../../style/mixin';
 
-.trainers_div {
+.memberList_div {
   padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
 
-  .trainers-tittle {
+  .memberList-tittle {
     @include title();
     width: 100%;
   }
 
-  .add_trainer {
+  #add_member_btn {
+    @include btn-AddMember();
+  }
+
+  #add_member_input {
     @include btn-AddMember();
   }
 }
