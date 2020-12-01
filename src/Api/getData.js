@@ -15,3 +15,6 @@ export const getData = {
     return axios.get(`${BASE_URL}/groups`).then((res) => res.data);
   },
 };
+// TODO GTB-工程实践: - 模块命名不合适
+// TODO GTB-工程实践: +- 有将数据请求抽取service层，但是命名不太合适
+// TODO GTB-工程实践: + 有将baseURL抽取常量

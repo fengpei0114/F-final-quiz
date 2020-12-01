@@ -23,8 +23,10 @@ export const MemberList = (Props) => {
       getData.createNew(resource, addName).then();
       setIsInAdding(false);
       setAddName('');
+      // TODO GTB-知识点: - 如果第二步是依赖第一步的，需要将第二步放在第一步的then()里面，或者使用async/await
     }
   };
+
   const deleteMember = (id) => {
     setMember(member.filter((index) => index.id !== id));
   };
